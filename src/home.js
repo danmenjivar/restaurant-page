@@ -1,4 +1,5 @@
-import heroImg from "./restaurant.jpg";
+import "./style.css";
+import heroImg from "./images/restaurant.jpg";
 
 /**
  * home module exports loadHome() function
@@ -6,19 +7,24 @@ import heroImg from "./restaurant.jpg";
  * content and styles to that element and then appends it to the DOM
  */
 export default function loadHome() {
-  const mainContainer = document.querySelector("#content");
+  const parentContainer = document.querySelector("#content");
   const homeContainer = document.createElement("div");
+  homeContainer.classList.add("home-img");
 
-  const homeImg = new Image();
-  homeImg.src = heroImg;
-  homeContainer.appendChild(homeImg);
-
-  const headline = document.createElement("div");
-  headline.textContent = "Aviato Restaurant & Grill";
+  const headline = document.createElement("h2");
+  headline.textContent = "Family Owned";
+  headline.classList.add("home-headline");
   homeContainer.appendChild(headline);
 
-  const copy = document.createTextNode("Best seafood in the valley.");
+  const copy = document.createElement("h3");
+  copy.textContent = "Est. 1998";
+  copy.classList.add("home-text");
   homeContainer.appendChild(copy);
 
-  mainContainer.appendChild(homeContainer);
+  parentContainer.appendChild(homeContainer);
+}
+
+function addStylings(elemID, className) {
+  const elem = document.querySelector(elemID);
+  elem.classList.add(className);
 }

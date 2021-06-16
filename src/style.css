@@ -16,9 +16,10 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 5rem;
-  width: 100vw;
+  height: 10vh;
+  width: 100%;
   background-color: var(--primary-blue-light);
+  z-index: 1;
 }
 
 .left {
@@ -51,4 +52,29 @@
 .nav-elem:hover {
   cursor: pointer;
   color: var(--primary-blue-dark);
+}
+
+.home-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 10vh;
+  background: url("./images/restaurant.jpg") no-repeat center center fixed
+    rgba(26, 24, 24, 0.3);
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+
+.home-headline {
+  font-size: 6rem;
+  color: white;
+}
+
+.home-text {
+  color: white;
 }
