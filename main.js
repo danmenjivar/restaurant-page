@@ -1,1 +1,1 @@
-console.log("Hey there!");
+(()=>{"use strict";(function(){let e=document.querySelector("#content"),t=document.createElement("div");t.textContent="Aviato Restaurant & Grill",e.appendChild(t)})()(),console.log("Hey there!")})();
