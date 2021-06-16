@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Sonsie+One&display=swap");
+
+:root {
+  /* colors */
+  --primary-blue-light: #497dde;
+  --primary-blue-dark: #214991;
+  --complimentary-red: #de725f;
+  --complimentary-green-light: #aade33;
+  --complimentary-green-dark: #729129;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5rem;
+  width: 100vw;
+  background-color: var(--primary-blue-light);
+}
+
+.left {
+  padding-left: 2rem;
+  margin-right: auto;
+}
+
+.logo {
+  font-size: 3rem;
+  font-family: "Sonsie One", cursive;
+  color: white;
+  user-select: none;
+}
+
+.nav-list {
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-elem {
+  font-size: 1.25rem;
+  padding: 0px 1rem;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-transform: capitalize;
+}
+
+.nav-elem:hover {
+  cursor: pointer;
+  color: var(--primary-blue-dark);
+}
