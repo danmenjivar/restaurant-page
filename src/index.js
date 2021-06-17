@@ -58,4 +58,4 @@ const unloadPage = () => {
 
 navBar();
 // loadHome();
-loadMenu();
+loadContact();

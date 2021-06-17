@@ -130,3 +130,33 @@
   grid-row-start: 2;
   grid-column: 2 / span 2;
 }
+
+.foreground-contact {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 1rem;
+  border-radius: 2em;
+  margin: 25% auto;
+  padding: 10px;
+  padding: 5px 5%;
+  width: 70%;
+  text-align: center;
+  background-color: var(--primary-blue-light);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.map {
+  flex-shrink: 5;
+  width: 50%;
+}
