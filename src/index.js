@@ -1,5 +1,7 @@
 import "./style.css";
 import loadHome from "./home.js";
+import loadMenu from "./menu.js";
+import loadContact from "./contact.js";
 
 function createNavElement(navBar, name) {
   const navElemLink = document.createElement("a");
@@ -8,18 +10,19 @@ function createNavElement(navBar, name) {
 
   // Add event listeners for switching
   navElemLink.addEventListener("click", () => {
+    unloadPage();
     switch (navElemLink.dataset.nav) {
       case "home":
-        // TODO Add Loading/Unloading
-        console.log("Go Home");
+        loadHome();
         break;
       case "menu":
-        console.log("Go Menu");
+        loadMenu();
         break;
       case "contact":
-        console.log("Go Contact");
+        loadContact();
         break;
       default:
+        console.error("ERROR: trying to load page that does not exist.");
         break;
     }
   });
@@ -48,5 +51,11 @@ const navBar = () => {
   mainContainer.appendChild(navBar);
 };
 
+const unloadPage = () => {
+  let page = document.querySelector("#content");
+  page.removeChild(page.lastChild);
+};
+
 navBar();
-loadHome();
+// loadHome();
+loadMenu();
