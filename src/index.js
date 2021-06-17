@@ -57,5 +57,4 @@ const unloadPage = () => {
 };
 
 navBar();
-// loadHome();
-loadContact();
+loadHome();
